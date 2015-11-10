@@ -6,8 +6,65 @@
  */
 
 module.exports = {
-	
 
+	// var bcrypt = require('bcrypt');
+	//
+	// module.exports = {
+	//
+	//   create: function (req, res) {
+	//
+	//     //Check for email and password in params sent via the form,
+	//     //if none redirect the brwoser back to teh ign-in form
+	//     if (!req.param('email') || !req.param('password')) {
+	//       var usernamePasswordRequiredError = [
+	//                                             {
+	//                                               name: 'usernamePasswordRequired',
+	//                                               message: 'You must enter both a username and password.'
+	//                                             }
+	//                                           ]
+	//       req.session.flah = {
+	//        err: usernamePasswordRequiredError
+	//       }
+	//       res.status(200);
+	//       return res.badSession('Sorry, you need to tell us the Email and Password', 'session/new');
+	//     }
+	//     User.findOneByEmail(req.param('email'), function foundUser (err, user) {
+	//       if (err) return next(err);
+	//
+	//       if (!user) {
+	//         return res.badSession('Sorry, this user was not found', 'session/new');
+	//       }
+	//
+	//       bcrypt.compare(req.param('password'), user.password, function(err, valid) {
+	//
+	//         if (err) {
+	//           res.status(400);
+	//           res.view('400', {message: 'Sorry, you need to tell us the ID of the FOO you want!'});
+	//         }
+	//
+	//         if (!valid) {
+	//           return res.badSession('Sorry, wrong Password', 'session/new');
+	//         }
+	//         //Log user in
+	//         req.session.authenticated = true;
+	//         req.session.User = user;
+	//
+	//         if (req.session.User.admin){
+	//           return res.redirect('/user');
+	//         }
+	//         return res.redirect('/user/show/'+user.id);
+	//       });
+	//     });
+	//   },
+	//
+	//   destroy: function (req, res, next) {
+	//
+	//     req.session.destroy();
+	//
+	//     res.redirect('/signup');
+	//     next();
+	//   },
+//
 
   /**
    * `SessionController.login()`
@@ -28,4 +85,3 @@ module.exports = {
     });
   }
 };
-

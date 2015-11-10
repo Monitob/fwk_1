@@ -19,8 +19,9 @@
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.connections.html
  */
 
-module.exports.connections = {
+ var url = require('url');
 
+module.exports.connections = {
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
@@ -80,7 +81,7 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
-  }
+  },
 
 
   /***************************************************************************
@@ -88,5 +89,14 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-
+  // More adapters:
+ // https://github.com/balderdashy/sails
+ couchdb: {
+   url: 'localhost',
+   adapter		: 'sails-couchdb-orm',
+   host			: url && url.hostname,
+   https			: url && (url.protocol === 'https'),
+   username	: process.env.COUCHDB_USERNAME || 'admin',
+   password	: process.env.COUCHDB_PASSWORD || 'admin'
+ }
 };
