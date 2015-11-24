@@ -18,6 +18,6 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'couchdb',
+    connection: 'postgres_server',
   }
 };

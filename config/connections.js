@@ -75,12 +75,12 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: {
+  postgres_server: {
     adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
+    host: 'localhost',
+    user: 'jbernabe',
+    password: '12345',
+    database: 'fwk_base'
   },
 
 
@@ -89,14 +89,4 @@ module.exports.connections = {
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-  // More adapters:
- // https://github.com/balderdashy/sails
- couchdb: {
-   url: 'localhost',
-   adapter		: 'sails-couchdb-orm',
-   host			: url && url.hostname,
-   https			: url && (url.protocol === 'https'),
-   username	: process.env.COUCHDB_USERNAME || 'admin',
-   password	: process.env.COUCHDB_PASSWORD || 'admin'
- }
 };

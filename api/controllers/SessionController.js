@@ -69,7 +69,7 @@ module.exports = {
   /**
    * `SessionController.login()`
    */
-  login: function (req, res) {
+  loginAction: function (req, res) {
     return res.json({
       todo: 'login() is not implemented yet!'
     });
@@ -80,8 +80,11 @@ module.exports = {
    * `SessionController.logout()`
    */
   logout: function (req, res) {
-    return res.json({
-      todo: 'logout() is not implemented yet!'
-    });
+    if (!req.param('email') || !req.param('password')){
+
+      return res.json({
+       todo: 'Please fill a valid mail and password'
+      });
+    }
   }
 };

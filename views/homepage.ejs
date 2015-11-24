@@ -21,7 +21,7 @@ setTimeout(function sunrise () {
             <li class="clearfix">
                 <div class="step">
                     <div class="sprite one"></div>
-                    <h3>You have to check the Forum <a href="http://sailsjs.org/#!/documentation/concepts/ORM/Models.html">here</a> with:</h3>
+                    <h3>You have to check the Forum  with:</h3>
                         <p>  <code> Categories </code> </p>
                         <p> <code>  Sous-Categories</code>  </p>
                         <p> <code>  Threads</code>  </p>
@@ -31,7 +31,7 @@ setTimeout(function sunrise () {
                 <div class="step">
                     <div class="sprite two"></div>
                     <h3>
-                        Your have to check  Tickets <a href="http://sailsjs.org/#!/documentation/concepts/ORM/Models.html">here</a> with:
+                        Your have to check  Tickets  with:
                     </h3>
                     <p>
                         <code>Création de tickets </code>
@@ -50,22 +50,28 @@ setTimeout(function sunrise () {
             <ul class="link-list">
 
                 <h4>Sing in</h4>
-                <form>
+                <form method="post" action="login">
                   Email: <input type="text" name="email"><br>
                   Password: <input type="password" name="password"><br>
                   <input type="submit" value="Submit">
                 </form>
                 <h4>Signup</h4>
-                <form>
-                  Email: <input type="text" name="email"><br>
-                  Password: <input type="password" name="password"><br>
-                  Password: <input type="password" name="password"><br>
+                <form method="post" action="signup">
+                  Email:
+                  <input type="text" name="email"><br>
+                  Password: 
+                  <input type="password" name="password">
+                  <br><br>
+                  <h4> Please confirm your password: </h4>
+                  <input type="password" name="password_confirmation"><br>
+                    <select>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">Francais</option>
+                    </select>
+                    <br>
                   <input type="submit" value="Submit">
                 </form>
-                <h4>Language</h4>
-                <a target="_blank" href="http://stackoverflow.com/search?q=sails.js"><li>English(default)</li></a>
-                <a target="_blank" href="https://github.com/balderdashy/sails"><li>Spanish</li></a>
-                <a target="_blank" href="https://groups.google.com/forum/#!forum/sailsjs"><li>Francais</li></a>
             </ul>
         </div>
     </div>
