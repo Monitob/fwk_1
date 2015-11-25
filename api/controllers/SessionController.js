@@ -67,13 +67,26 @@ module.exports = {
 //
 
   /**
-   * `SessionController.login()`
+   * `SessionController.logUser()`
    */
-  loginAction: function (req, res) {
+  logUser: function (req, res) {
     return res.json({
       todo: 'login() is not implemented yet!'
     });
   },
+
+  /**
+   *  `SessionController.CreateUser()`
+   */
+  CreateUser: function (req, res) {
+    sails.log(req.param('email'))
+    sails.log(req.param('password'))
+    return res.json({
+      todo: 'create  user account todo',
+       answer: req.param('email'),
+       answer2: req.param('password_confirmation')
+    });
+  }, 
 
 
   /**
