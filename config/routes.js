@@ -38,8 +38,8 @@ module.exports.routes = {
   
   'post /login': 'SessionController.logUser',
 
+  'get /home': {view: 'user/home' },
   'post /signup': 'SessionController.CreateUser',
-  'get /home': {view: '/user/home' }
 
   /***************************************************************************
   *                                                                          *

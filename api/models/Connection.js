@@ -15,17 +15,15 @@ module.exports = {
 
      email : {
 	  	type: 'email',
-      require: true,
+      required: true,
       unique: true
 		
   	},
 
   	password : {
 	  	type: 'string',
-      require: true,
+      required: true,
       minLength: 3,
-      maxLength: 15,
-
 	  },
 
     password_confirmation: {

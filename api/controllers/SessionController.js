@@ -24,20 +24,17 @@ module.exports = {
    */
   CreateUser: function (req, res) {
     var userObj = {
-      name: req.param('email'),
+      email: req.param('email'),
       password: req.param('password'),
       lang: req.param('language'),
     }
-   /* Connection.create(userObj, function newUser(err, user){
+    Connection.create(userObj, function newUser(err, userObj){
       if (err){
-        res.flash('error','Error');
-        return res.redirect('http://google.com');
+        sails.log(err)
+        return res.redirect('/');
       }
-      req.session.aunthenthicated = true;
-      req.session.User = userObj;
-      return res.redirect('/users');
-    });*/
-   return res.json(user);
+      return res.redirect('/home');
+    });
   }, 
 
 
