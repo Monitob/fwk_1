@@ -10,6 +10,8 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
   attributes: {
+  
+    tableName: "users",
 
      email : {
 	  	type: 'email',
@@ -28,7 +30,6 @@ module.exports = {
 
     password_confirmation: {
       type: 'string',
-      require: true
     },
 
 	  language: {
@@ -37,6 +38,13 @@ module.exports = {
 	  	defaultsTo: 'en',
       len: 2
 	  },
+
+    toJSON: function() {
+      var obj = this.Object();
+      delete password;
+      delete password_confirmation;
+      return obj;
+    },
 
     beforeCreate: function (values, next){
       if (!values.password || values.password != password_confirmation){

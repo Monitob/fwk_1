@@ -80,7 +80,8 @@ module.exports.connections = {
     host: 'localhost',
     user: 'jbernabe',
     password: '12345',
-    database: 'fwk_base'
+    database: 'fwk_base',
+    schema: true
   },
 
 
